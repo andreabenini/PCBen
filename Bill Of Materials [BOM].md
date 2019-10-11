@@ -16,6 +16,7 @@
     - P/N No. T8814
     - Driving with 12V (PC ATX Power Supply), unknown Amps requirements
     - 8 Wires motor (bipolar and unipolar modes), converted to bipolar mode with 4 wires serial cabling
+
         | Cable        | inner winding coupled to | Connect To          |
         | ------------ | ------------------------ | :------------------ |
         | **`orange`** | green                    |  _brown_            |
