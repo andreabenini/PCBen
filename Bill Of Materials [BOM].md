@@ -11,7 +11,7 @@
       cloned boards)
     - Arduino V3 Shield CNC stepper motors driver
     - __#4__ Pololu A4988 stepper motor driver carrier
-- NEMA23 stepper motor
+- NEMA23 stepper motor (X Axis)
     - Model 23LM-C038-04, R 98-11, Minebea CO. LTD
     - P/N No. T8814
     - Driving with 12V (PC ATX Power Supply), unknown Amps requirements
@@ -28,6 +28,11 @@
         | **`white`**  | yellow                   |  **[B2]** `(black)` |
         | **`yellow`** | white                    |   _red_             |
     - You don't strictly need _this_ motor, It's just a scrap one I had lying around
+- NEMA 23 stepper motor (Y Axis)
+    - Minebea-Matsushita motor corporation
+    - P/N 78800 Rev.C
+    - 23KM-K207-03V
+    - 6 Wires  motor
 
 
 ## Software
