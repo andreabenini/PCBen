@@ -1,5 +1,10 @@
 # PCBen Bill Of Materials (BOM)
 ## Hardware
+- C8962A - HP Deskjet 5150 Color Inkjet Printer<br>
+  Taken from a trash can, fried motherboard and inkjet nozzle was clearly damaged. BTW it seems to be quite nice and
+  solid device. Stainless steel chassis with a solid base, plastic gears are in good shape, some lubrication and
+  cleaning is mandatory, minor hw restorations but overall seem to be fine.
+  Black mark sensors and motors need few tests but I can see some potential from it. Price: free.
 - Arduino, CNC shield, Pololu stepper drivers, usb cable.<br>
   those might be purchased individually or as a complete kit, for example Amazon has
   https://www.amazon.com/gp/product/B07HF391GN/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&psc=1
