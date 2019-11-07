@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>PCBen - PCB Milling Machine</title>
+    <title>PCBen - about</title>
     <meta charset="utf-8">
     <meta name="author"      content="Andrea Benini">
     <meta name="description" content="Ben's website">
@@ -44,34 +44,35 @@
     </nav>
     <!-- Page Content -->
     <div class="container" id="mainContainer">
-        <h5 class="mt-4 mb-3">PCBen&nbsp;&nbsp;&nbsp;<small>diy PCB milling machine</small></h5>
+        <h5 class="mt-4 mb-3"><a href='../'>PCBen&nbsp;&nbsp;&nbsp;<small>project home</small></a></h5>
         <!-- Breadcrumb -->
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><i class="fa fa-home" aria-hidden="true"></i></li>
-            <li class="breadcrumb-item active">project information</li>
+            <li class="breadcrumb-item"><a href="../"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+            <li class="breadcrumb-item active">about this project</li>
         </ol>
 
-        <!-- Page row content -->
+        <!-- About Content -->
         <div class="row">
-            <!-- Current build log -->
-            <div class="col-md-8">
-                <div class="card mb-4">
-                    <h5  class="card-header">Current Project Status</h5>
-                    <img class="card-img-top" src="https://github.com/andreabenini/PCBen/raw/master/logo.png" alt="Project Logo"
-                         style="width: 50%; align-self: center; margin-top: 40px;">
+            <div class="col-lg-8">
+                <div class="card my-8">
+                    <h6 class="card-header">information</h6>
+                    <div class="card-body" style="text-align: justify;" id="content"></div>
+                </div>
+                <script>
+                    $.get("../about.md", function(data) {
+                        $('#content').html(marked(data));
+                    });
+                </script>
+            </div>
+            <div class="col-lg-4">
+                <!-- Project image -->
+                <div class="card my-4" style="margin-top: 0px!important;">
                     <div class="card-body">
-                        <p class="card-text" style="text-align: justify;">
-                            Basic steel frame, motors mounted in place and caddie smoothly moving on rails. Cleaning and lubrication are still needed.
-                            I'm now working on shafts and pulleys to provide a good grip between caddie and motors. 
-                            Electronics is still lacking in order to complete basic hardware part
-                        </p>
-                        <a href="/PCBen/blog/" class="btn btn-primary">Build log updates →</a>
+                        <img class="img-fluid rounded mb-4" src="https://github.com/andreabenini/PCBen/raw/master/logo.png" alt="about this project"
+                            style="align-self: center; margin-top: 40px;">
                     </div>
                 </div>
-            </div>
-          
-            <!-- Sidebar Widgets Column -->
-            <div class="col-md-4">
+                <!-- Project widget -->
                                 <!-- Information basics -->
                 <div class="card my-4" style="margin-top: 0px!important;">
                     <h5 class="card-header">Project Information</h5>
@@ -100,10 +101,9 @@
 
 
             </div>
-            <!-- Sidebar -->
-        </div>  <!-- Page row content -->
+        </div> <!-- /about content -->
 
-        <div class="row">&nbsp;</div>
+        <div class="row">&nbsp;<br>&nbsp;</div>
     </div> <!-- Page Content -->
 
     <!-- Footer -->
