@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>PCBen - PCB Milling Machine</title>
+    <title>PCBen - Dismantling hardware</title>
     <meta charset="utf-8">
     <meta name="author"      content="Andrea Benini">
     <meta name="description" content="Ben's website">
@@ -20,7 +20,7 @@
     <script src="/res/bootstrap/js/bootstrap.bundle.min.js"></script>       <!-- Bootstrap                      -->
     <!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
     <!--<link rel="stylesheet" href="./css/github-calendar-responsive.css" />-->
-
+<script src="../index.js"></script>
 </head>
 <body>
     <ul class="bubble-boxes"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>
@@ -44,35 +44,42 @@
     </nav>
     <!-- Page Content -->
     <div class="container" id="mainContainer">
-        <h5 class="mt-4 mb-3">PCBen&nbsp;&nbsp;&nbsp;<small>diy PCB milling machine</small></h5>
-        <!-- Breadcrumb -->
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><i class="fa fa-home" aria-hidden="true"></i></li>
-            <li class="breadcrumb-item active">project information</li>
-        </ol>
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-4 mb-3">Dismantling hardware</h1>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../../"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        <li class="breadcrumb-item"><a href="../">Blog</a></li>
+        <li class="breadcrumb-item active">Dismantling hardware</li>
+    </ol>
 
-        <!-- Page row content -->
-        <div class="row">
-            <!-- Current build log -->
-            <div class="col-md-8">
-                <div class="card mb-4">
-                    <h5  class="card-header">Current Project Status</h5>
-                    <img class="card-img-top" src="https://github.com/andreabenini/PCBen/raw/master/logo.png" alt="Project Logo"
-                         style="width: 50%; align-self: center; margin-top: 40px;">
-                    <div class="card-body">
-                        <p class="card-text" style="text-align: justify;">
-                            Basic steel frame, motors mounted in place and caddie smoothly moving on rails. Cleaning and lubrication are still needed.
-                            I'm now working on shafts and pulleys to provide a good grip between caddie and motors. 
-                            Electronics is still lacking in order to complete basic hardware part
-                        </p>
-                        <a href="/PCBen/blog/" class="btn btn-primary">Build log updates →</a>
-                    </div>
-                </div>
+    <div class="row">
+        <!-- Post Content Column -->
+        <div class="col-lg-8">
+
+            <!-- Preview Image -->
+            <div class="blogImageDiv">
+                <img class="img-fluid rounded" src="image.png" alt="">
             </div>
-          
-            <!-- Sidebar Widgets Column -->
-            <div class="col-md-4">
-                                <!-- Information basics -->
+            <div class="blogImageSpacing">
+                <div class="blogAuthor">author: Ben</div>
+                <div class="blogDate">2019/10/11</div>
+            </div>
+            <hr>
+
+            <!-- Post Content -->
+            <div id="content" style="text-align: justify;"></div>
+            <script>
+                $.get("README.md", function(data) {
+                    $('#content').html(marked(data));
+                });
+            </script>
+            <div class="blogTags">TAGS: ['hardware', 'disassembly', 'general']</div>
+            <div style="height: 70px;">&nbsp</div>
+        </div>
+
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
+                <!-- Information basics -->
                 <div class="card my-4" style="margin-top: 0px!important;">
                     <h5 class="card-header">Project Information</h5>
                     <div class="card-body" style="text-align: justify;">
@@ -100,11 +107,10 @@
                 </div>
 
 
-            </div>
-            <!-- Sidebar -->
-        </div>  <!-- Page row content -->
+        </div>
 
-        <div class="row">&nbsp;</div>
+    </div>
+    <!-- /.row -->
     </div> <!-- Page Content -->
 
     <!-- Footer -->
@@ -115,8 +121,29 @@
         </div>
     </footer>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="/res/jquery/jquery.min.js"></script>
-    <script src="/res/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Image Modal Box on blog contents -->
+    <div class="modal fade" id="popupImageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="max-width: 80%; max-height: 80%;">
+            <div class="modal-content">              
+                <div class="modal-body">
+                    <span id="popupImageTitle" aria-hidden="true"></span>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+                    <img src="" class="popupImagePreview" style="width: 100%;" >
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function() {
+                $('#content img').on('click', function() {
+                    $('.popupImagePreview').attr('src', $(this).attr('src'));
+                    $('#popupImageTitle').text($(this).attr('alt'));
+                    $('#popupImageModal').modal('show');   
+                });		
+        });
+    </script>
+
 </body>
 </html>

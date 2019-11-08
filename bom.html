@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>PCBen - PCB Milling Machine</title>
+    <title>PCBen - Bill Of Materials [BOM]</title>
     <meta charset="utf-8">
     <meta name="author"      content="Andrea Benini">
     <meta name="description" content="Ben's website">
@@ -44,34 +44,49 @@
     </nav>
     <!-- Page Content -->
     <div class="container" id="mainContainer">
-        <h5 class="mt-4 mb-3">PCBen&nbsp;&nbsp;&nbsp;<small>diy PCB milling machine</small></h5>
+        <h5 class="mt-4 mb-3">Bill Of Materials</h5>
         <!-- Breadcrumb -->
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><i class="fa fa-home" aria-hidden="true"></i></li>
-            <li class="breadcrumb-item active">project information</li>
+            <li class="breadcrumb-item"><a href="./"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+            <li class="breadcrumb-item active">BOM</li>
         </ol>
 
         <!-- Page row content -->
         <div class="row">
             <!-- Current build log -->
-            <div class="col-md-8">
-                <div class="card mb-4">
-                    <h5  class="card-header">Current Project Status</h5>
+            <div class="col-md-12">
+                <div class="card mb-8">
+                    <h5  class="card-header">Complete List</h5>
+                    <div class="card-body">
+                        <strong><u>NOTE</u>: </strong>
+                        This is a work in progress list, items are added and removed due to the <a href="blog/">construction blog</a>
+                    </div>
                     <img class="card-img-top" src="https://github.com/andreabenini/PCBen/raw/master/logo.png" alt="Project Logo"
                          style="width: 50%; align-self: center; margin-top: 40px;">
-                    <div class="card-body">
+                    <div class="card-body" style="text-align: center;">Current Project Status</div>
+                    <div class="card-body" style="text-align: justify;" id="content"></div>
+                    <script>
+                        $.get("bom.md", function(data) {
+                            $('#content').html(marked(data));
+                        });
+                    </script>
+                        <!--
                         <p class="card-text" style="text-align: justify;">
                             Basic steel frame, motors mounted in place and caddie smoothly moving on rails. Cleaning and lubrication are still needed.
                             I'm now working on shafts and pulleys to provide a good grip between caddie and motors. 
                             Electronics is still lacking in order to complete basic hardware part
                         </p>
                         <a href="/PCBen/blog/" class="btn btn-primary">Build log updates →</a>
-                    </div>
+                        -->
                 </div>
             </div>
-          
+        </div>  <!-- Page row content -->
+
+        <!-- Page row content -->
+        <div class="row">
             <!-- Sidebar Widgets Column -->
-            <div class="col-md-4">
+            <div class="col-md-12">
+                &nbsp;
                                 <!-- Information basics -->
                 <div class="card my-4" style="margin-top: 0px!important;">
                     <h5 class="card-header">Project Information</h5>
@@ -101,7 +116,6 @@
 
 
             </div>
-            <!-- Sidebar -->
         </div>  <!-- Page row content -->
 
         <div class="row">&nbsp;</div>
