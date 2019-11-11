@@ -38,6 +38,8 @@
     - P/N 78800 Rev.C
     - 23KM-K207-03V
     - 6 Wires  motor
+- #1 GT2 fixed timing pulleys, inner: 8mm. 20 Teeth
+- Closed loop GT2 6mm belt (20 Teeth), 110mm
 
 
 ## Software
