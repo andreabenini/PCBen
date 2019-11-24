@@ -33,14 +33,20 @@
         | **`white`**  | yellow                   |  **[B2]** `(black)` |
         | **`yellow`** | white                    |   _red_             |
     - You don't strictly need _this_ motor, It's just a scrap one I had lying around
+    - Repurposed from previous hardware, price: **Free**
 - NEMA 23 stepper motor (Y Axis)
     - Minebea-Matsushita motor corporation
     - P/N 78800 Rev.C
     - 23KM-K207-03V
     - 6 Wires  motor
-- #1 GT2 fixed timing pulleys, inner: 8mm. 20 Teeth
-- Closed loop GT2 6mm belt (20 Teeth), 110mm
-
+    - Repurposed from previous hardware, price: **Free**
+- **#3** GT2 fixed timing pulleys, inner: 8mm. 20 Teeth. Source: Banggood, Price: ~(4-5)$ six-pack
+- Closed loop GT2 6mm belt (20 Teeth), 110mm. Price (~2 $)
+- **#2** 246x17mm drawer slides with ball bearings, picked up at a sale on a local hardware shop,
+  they're not so accurate but when moved from a pulley they're quite effective. Price: 4.50€ each
+- Aluminium angle bar, 90°, 10x40mm. ~1.5m. Something I already had around so I adapted the project
+  to it but you can buy it nearly everywhere
+- M3 nuts and M3x40 bolts. I'm slightly adapting bolts length to match hardware when needed
 
 ## Software
 - **GRBL v1.1** from [github official page](https://github.com/gnea/grbl), built with Arduino `v1.8.10`
