@@ -47,6 +47,7 @@
 - Aluminium angle bar, 90°, 10x40mm. ~1.5m. Something I already had around so I adapted the project
   to it but you can buy it nearly everywhere.
 - M3 nuts and M3x40 bolts. I'm slightly adapting bolts length to match hardware when needed.
+- Washers, various sizes, mainly used as guides for the GT2 belt.
 - GT2 6mm belt, ~2m. Price: ~2.50$ from common well known chinese shops, free shipping.
 - **#2** 20 teeth timing pulley for GT2 belt, bore 8mm. Price: 1.50$ each, free shipping.
 - **#1** box 10pcs, 606ZZ ball bearings, bore 6mm. Price: 2.50$ for a set, free shipping.
