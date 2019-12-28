@@ -16,6 +16,15 @@
       cloned boards)
     - Arduino V3 Shield CNC stepper motors driver
     - __#4__ Pololu A4988 stepper motor driver carrier
+- Raspberry Pi, whatever version you want.  
+    I already have an acient RPi v1, computing power is enough so there's no need for a powerful
+    version, take whatever board you prefer, even a Zero is fine. A wireless adapter is a nice have
+    in order to avoid ethernet cables. In my case I also added Asus USB-N10 wifi adapter,
+    you can skip it if you already have a raspberry with builtin wifi on it.
+- TFT touch screen for the Raspberry. A generic 26pin TFT display can be connected to 40 pin
+    Raspberry board too (v2,3,4) so just take it your preferred one, mine is
+    [this one](https://www.banggood.com/3_2Inch-320x240-Resolution-TFT-LCD-Touch-Screen-for-Raspberry-Pi-3-Model-B2-Model-BB-p-1370870.html?rmmds=search&cur_warehouse=CN)
+    but the only requirement is the Raspberry compatibility.
 - NEMA23 stepper motor (X Axis)
     - Model 23LM-C038-04, R 98-11, Minebea CO. LTD
     - P/N No. T8814
