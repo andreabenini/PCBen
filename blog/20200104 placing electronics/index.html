@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PCBen - placing electronics</title>
+    <meta charset="utf-8">
+    <meta name="author"      content="Andrea Benini">
+    <meta name="description" content="Ben's website">
+    <script src="/js/marked.js"></script>                                   <!-- Markdown renderer -->
+    <script src="/js/github-calendar.min.js"></script>                      <!-- github calendar -->
+    <link rel="stylesheet" href="/css/site.css" />
+    <link rel="stylesheet" href="/css/github-calendar.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="/res/bootstrap/css/bootstrap.min.css"   rel="stylesheet">   <!-- Bootstrap core CSS             -->
+    <link href="/res/fontawesome/css/all.min.css"       rel="stylesheet">   <!-- FontAwesome                    -->
+    <link href="/theme/res/css/modern-business.css"     rel="stylesheet">   <!-- Custom styles for this theme   -->
+    <link href="/theme/res/css/theme.css"               rel="stylesheet">   <!-- Current theme css              -->
+
+    <script src="/res/jquery/jquery.min.js"></script>                       <!-- jquery                         -->
+    <script src="/res/bootstrap/js/bootstrap.bundle.min.js"></script>       <!-- Bootstrap                      -->
+    <!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
+    <!--<link rel="stylesheet" href="./css/github-calendar-responsive.css" />-->
+<script src="../index.js"></script>
+</head>
+<body>
+    <ul class="bubble-boxes"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/"><i class="fa fa-home" aria-hidden="true"></i></a>
+            <a class="navbar-brand" href="/PCBen"><div style="color: white;">/&nbsp;&nbsp;PCBen</div></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                    data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="/PCBen/blog/">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/PCBen/about/">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page Content -->
+    <div class="container" id="mainContainer">
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-4 mb-3">placing electronics</h1>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../../"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        <li class="breadcrumb-item"><a href="../">Blog</a></li>
+        <li class="breadcrumb-item active">placing electronics</li>
+    </ol>
+
+    <div class="row">
+        <!-- Post Content Column -->
+        <div class="col-lg-8">
+
+            <!-- Preview Image -->
+            <div class="blogImageDiv">
+                <img class="img-fluid rounded" src="image.png" alt="">
+            </div>
+            <div class="blogImageSpacing">
+                <div class="blogAuthor">author: Ben</div>
+                <div class="blogDate">2020/01/04</div>
+            </div>
+            <hr>
+
+            <!-- Post Content -->
+            <div id="content" style="text-align: justify;"></div>
+            <script>
+                $.get("README.md", function(data) {
+                    $('#content').html(marked(data));
+                });
+            </script>
+            <div class="blogTags">TAGS: ['hardware', 'build', 'electronic']</div>
+            <div style="height: 70px;">&nbsp</div>
+        </div>
+
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
+                <!-- Information basics -->
+                <div class="card my-4" style="margin-top: 0px!important;">
+                    <h5 class="card-header">Project Information</h5>
+                    <div class="card-body" style="text-align: justify;">
+                        Status: <strong>Alpha</strong><br>
+                        Project is still in alpha stage, hardware frame is solid and working fine. Most of the work is currently concentrated
+                        on pulleys and moving parts. Electronics and Z-Axis are not yet planned.<br>Work in progress.
+                    </div>
+                </div>
+    
+                <!-- Topics widget -->
+                <div class="card my-4">
+                    <h5 class="card-header">Topics</h5>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="/PCBen/"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;project</a></li>
+                                    <li><a href="/PCBen/bom.html"><i class="fa fa-clipboard-list" aria-hidden="true"></i>&nbsp;&nbsp;bill of materials (BOM)</a></li>
+                                    <li><a href="/PCBen/blog/"><i class="fa fa-newspaper" aria-hidden="true"></i>&nbsp;blog</a></li>
+                                    <li><a href="/PCBen/software/"><i class="fa fa-save" aria-hidden="true"></i>&nbsp;software</a></li>
+                                    <li><a href="/PCBen/about/"><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;about</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+        </div>
+
+    </div>
+    <!-- /.row -->
+    </div> <!-- Page Content -->
+
+    <!-- Footer -->
+    <footer class="py-1 bg-dark footer-absolute">
+        <div class="container">
+            
+            <p class="m-0 text-right text-white footerLabel">Andrea Benini 2019</p>
+        </div>
+    </footer>
+
+    <!-- Image Modal Box on blog contents -->
+    <div class="modal fade" id="popupImageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="max-width: 80%; max-height: 80%;">
+            <div class="modal-content">              
+                <div class="modal-body">
+                    <span id="popupImageTitle" aria-hidden="true"></span>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+                    <img src="" class="popupImagePreview" style="width: 100%;" >
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function() {
+                $('#content img').on('click', function() {
+                    $('.popupImagePreview').attr('src', $(this).attr('src'));
+                    $('#popupImageTitle').text($(this).attr('alt'));
+                    $('#popupImageModal').modal('show');   
+                });		
+        });
+    </script>
+
+</body>
+</html>

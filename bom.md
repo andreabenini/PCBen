@@ -25,6 +25,10 @@
     Raspberry board too (v2,3,4) so just take it your preferred one, mine is
     [this one](https://www.banggood.com/3_2Inch-320x240-Resolution-TFT-LCD-Touch-Screen-for-Raspberry-Pi-3-Model-B2-Model-BB-p-1370870.html?rmmds=search&cur_warehouse=CN)
     but the only requirement is the Raspberry compatibility.
+- 5V DC 2A power supply, provides power to Arduino, CNC Shield and Raspberry Pi boards. Not purchased
+    outside but refurbished from my spares. Price **Free**
+- 24V DC 10A previously used in my lab for other purposes, now using it to provide power to NEMA motors.
+    Price **Free**
 - NEMA23 stepper motor (X Axis)
     - Model 23LM-C038-04, R 98-11, Minebea CO. LTD
     - P/N No. T8814
